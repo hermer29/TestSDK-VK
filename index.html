@@ -6,6 +6,7 @@
     <title>Unity WebGL Player | VKGamesUnity</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -58,8 +59,8 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/fe9121878fe7395a9a6a45e7432f9e35.data.unityweb",
-        frameworkUrl: buildUrl + "/40d4dd2a919449274b5eb0262176f993.js.unityweb",
+        dataUrl: buildUrl + "/93de6743a15697036fda0f2b35ea9b4f.data.unityweb",
+        frameworkUrl: buildUrl + "/82f5be29c904ac8f871ed388ae1cb3ec.js.unityweb",
         codeUrl: buildUrl + "/4e95ea7301f6621329f913f7dd6a42cc.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
@@ -114,6 +115,7 @@
         });
       };
       document.body.appendChild(script);
+      window['vkBridge'].send('VKWebAppInit');
     </script>
   </body>
 </html>
