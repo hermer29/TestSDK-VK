@@ -115,7 +115,10 @@
         });
       };
       document.body.appendChild(script);
-      window['vkBridge'].send('VKWebAppInit');
+      setTimeout(function () {
+        window['vkBridge'].send('VKWebAppInit');
+      }, 3000);
+      
     </script>
   </body>
 </html>
